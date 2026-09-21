@@ -1,22 +1,4 @@
-# with open("article.txt","r",encoding="utf-8")as file:
-#     text = file.read().split()
-#     print(f"length of longest word in text is: {len(max(text,key = len))}")
-
-from collections import Counter
 import string
-with open("article.txt","r",encoding="utf-8")as text_file:
-    text = text_file.read()
-text = text.lower()
-
-text = text.translate(str.maketrans("", "", string.punctuation))
-
-# frequency = Counter(text.split())
-# print(frequency)
-# top10 = frequency.most_common(3)
-# print(top10)
-# for word,count in top10:
-#     print(word,count)
-
 def clean_text(text):
     text = text.lower()
     text = text.translate(str.maketrans("", "", string.punctuation))
